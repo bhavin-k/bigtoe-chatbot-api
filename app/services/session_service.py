@@ -171,7 +171,7 @@ class SessionService:
             - rating is decimal(3,2) and should be used to filter or sort results based on user ratings.
             - Always put maximum as limit 10 even if user specified large number in the query to avoid returning too many results if more than one row are there in results.
             - On query always put db name 'fitness_database' then using '.' access table name like 'fitness_database.session_providers' instead of just 'session_providers'.
-            - When using a subquery OR inside an aggregate function just use the column names from the subquery, not the table name.
+            - When using a select on subquery don't use the table name put the field name directly.
             - Only return those fields that are **relevant to the user query**. Not all the fields from the tables.
             
             
